@@ -8,7 +8,17 @@
   --rose-800: hsl(332, 51%, 32%);
   --rose-50: hsl(330, 100%, 98%);
 }
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+}
 
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf")
+    format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,14 +30,17 @@ html {
 body {
   font-size: 1.6rem;
   background-color: var(--stone-100);
+  font-family: "Outfit", sans-serif;
+}
+h1 {
+  font-family: "Young Serif", sans-serif;
 }
 h1,
 p {
+  font-weight: 400;
   line-height: 1.5;
 }
-li {
-  list-style: none;
-}
+
 a {
   text-decoration: none;
 }
@@ -61,6 +74,8 @@ img {
   border-radius: 2rem;
 }
 .time h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
   color: var(--rose-800);
   padding: 1.2rem 0;
 }
@@ -77,6 +92,9 @@ img {
 .nutrition {
   margin-top: 2rem;
 }
+.instructions strong {
+  margin-right: 1rem;
+}
 .ingredients__title,
 .instructions__title,
 .nutrition__title {
@@ -88,10 +106,14 @@ img {
   padding: 2rem;
 }
 .ingredients ul li,
-.instructions ul li {
+.instructions ol li {
   margin-bottom: 0.9rem;
   color: var(--stone-600);
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2.4rem;
 }
+
 .nutrition p {
   color: var(--stone-600);
 }
